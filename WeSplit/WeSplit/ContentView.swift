@@ -58,10 +58,12 @@ struct ContentView: View {
                 
                 Section(header: Text("Total amount of cheque")) {
                     Text("$\(billTotal, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == 0 ? Color.red : Color.black)
                 }
                 
                 Section(header: Text("Amount per person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == 0 ? Color.red : Color.black)
                 }
                 .navigationBarTitle("WeSplit")
             }
