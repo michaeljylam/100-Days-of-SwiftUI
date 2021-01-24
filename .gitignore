@@ -1,3 +1,7 @@
+# Photoshop Documents
+*.psd
+
+# ----- .gitignore Defaults -----
 # macOS
 .DS_Store
 
