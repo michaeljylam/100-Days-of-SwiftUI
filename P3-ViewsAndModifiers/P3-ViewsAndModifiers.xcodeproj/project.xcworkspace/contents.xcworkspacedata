@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/michaellam/Development/100-Days-of-SwiftUI/ViewsAndModifiers/P3-ViewsAndModifiers.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

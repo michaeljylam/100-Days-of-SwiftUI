@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  P5-WordScramble
 //
-//  Created by Michael Lam on 2021-07-05.
+//  Created by Michael Lam on 2022-06-12.
 //
 
 import SwiftUI
@@ -13,41 +13,108 @@ struct ContentView: View {
     @State private var newWord = ""
     @State private var score = 0
     
+    @FocusState private var textFieldIsFocused: Bool
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .autocapitalization(.none)
-                    .padding()
-                
-                List(usedWords, id: \.self) {
-                    Image(systemName: "\($0.count).circle")
-                    Text($0)
-                }
-                
-                Text("Score: " + String(score))
+            VStack(spacing: 0) {
+                Text(rootWord)
+                    .font(.largeTitle)
                     .bold()
+                    .padding(.top)
+                
+                List {
+                    TextField("Enter your word", text: $newWord, onCommit: {
+                        textFieldIsFocused = true
+                    })
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .focused($textFieldIsFocused)
+
+                    Section(usedWords.count > 0 ? "Used Words" : "") {
+                        ForEach(usedWords, id: \.self) { word in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                Text(word)
+                            }
+                        }
+                    }
+                }
+                .listStyle(InsetGroupedListStyle())
             }
-            .navigationBarTitle(rootWord)
+            .background(Color(UIColor.systemGroupedBackground))
             .toolbar {
-                Button("New Game") {
-                    newGame()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Score: \(score)")
+                }
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button("New Word") {
+                        startGame()
+                    }
                 }
             }
+            .navigationBarTitle("", displayMode: .inline)
+            .onSubmit(addNewWord)
             .onAppear(perform: startGame)
-            .alert(isPresented: $showingError) {
-                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            .alert(errorTitle, isPresented: $showingError) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(errorMessage)
             }
         }
     }
     
+    func addNewWord() {
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        guard answer.count >= 3 else {
+            wordError(title: "Word too short", message: "Find a word that is at least 3 letters long!")
+            return
+        }
+        
+        guard isOriginal(word: answer) else {
+            wordError(title: "Word already used", message: "Be more original!")
+            return
+        }
+        
+        guard isPossible(word: answer) else {
+            wordError(title: "Word not possible", message: "You can't spell that word from \"\(rootWord)\"!")
+            return
+        }
+        
+        guard isReal(word: answer) else {
+            wordError(title: "Word not recognized", message: "You can't just make words up, you know!")
+            return
+        }
+        
+        withAnimation {
+            usedWords.insert(answer, at: 0)
+        }
+        score = score + newWord.count
+        newWord = ""
+    }
+    
+    func startGame() {
+        usedWords.removeAll()
+        score = 0
+        
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            if let startWords = try? String(contentsOf: startWordsURL) {
+                let allWords = startWords.components(separatedBy: "\n")
+                rootWord = allWords.randomElement() ?? "silkworm"
+                return
+            }
+        }
+        
+        fatalError("Could not load start.txt from bundle.")
+    }
+    
     func isOriginal(word: String) -> Bool {
-        !usedWords.contains(word)
+        !usedWords.contains(word) && word != rootWord
     }
     
     func isPossible(word: String) -> Bool {
@@ -72,73 +139,10 @@ struct ContentView: View {
         return misspelledRange.location == NSNotFound
     }
     
-    func isLongEnough(word: String) -> Bool {
-        return word.count >= 3
-    }
-    
-    func isNotRootWord(word: String) -> Bool {
-        return word != rootWord
-    }
-    
     func wordError(title: String, message: String) {
         errorTitle = title
         errorMessage = message
         showingError = true
-    }
-    
-    func addNewWord() {
-        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        guard answer.count > 0 else {
-            return
-        }
-        
-        guard isOriginal(word: answer) else {
-            wordError(title: "Word already used", message: "Be more original!")
-            return
-        }
-        
-        guard isPossible(word: answer) else {
-            wordError(title: "Word not recognized", message: "You can't just make up a word!")
-            return
-        }
-        
-        guard isReal(word: answer) else {
-            wordError(title: "Word not possible", message: "That isn't a real word!")
-            return
-        }
-        
-        guard isLongEnough(word: answer) else {
-            wordError(title: "Word too short", message: "Enter a word with at least three letters!")
-            return
-        }
-        
-        guard isNotRootWord(word: answer) else {
-            wordError(title: "Word is the same", message: "Be more original!")
-            return
-        }
-        
-        usedWords.insert(answer, at: 0)
-        score += answer.count
-        newWord = ""
-    }
-    
-    func startGame() {
-        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-            if let startWords = try? String(contentsOf: startWordsURL) {
-                let allWords = startWords.components(separatedBy: "\n")
-                rootWord = allWords.randomElement() ?? "silkworm"
-                return
-            }
-        }
-        
-        fatalError("Could not load start.txt from bundle.")
-    }
-    
-    func newGame() {
-        usedWords.removeAll()
-        score = 0
-        startGame()
     }
 }
 

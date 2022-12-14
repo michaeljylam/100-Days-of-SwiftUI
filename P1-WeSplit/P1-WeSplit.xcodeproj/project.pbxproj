@@ -3,32 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95102D4E24BAF2FA00F8E9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95102D4D24BAF2FA00F8E9BE /* AppDelegate.swift */; };
-		95102D5024BAF2FA00F8E9BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95102D4F24BAF2FA00F8E9BE /* SceneDelegate.swift */; };
-		95102D5224BAF2FA00F8E9BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95102D5124BAF2FA00F8E9BE /* ContentView.swift */; };
-		95102D5424BAF2FD00F8E9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95102D5324BAF2FD00F8E9BE /* Assets.xcassets */; };
-		95102D5724BAF2FD00F8E9BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95102D5624BAF2FD00F8E9BE /* Preview Assets.xcassets */; };
-		95102D5A24BAF2FD00F8E9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95102D5824BAF2FD00F8E9BE /* LaunchScreen.storyboard */; };
+		95B99E7B28519B9B005C748D /* P1_WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B99E7A28519B9B005C748D /* P1_WeSplitApp.swift */; };
+		95B99E7D28519B9B005C748D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B99E7C28519B9B005C748D /* ContentView.swift */; };
+		95B99E7F28519B9E005C748D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B99E7E28519B9E005C748D /* Assets.xcassets */; };
+		95B99E8228519B9E005C748D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B99E8128519B9E005C748D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		95102D4A24BAF2FA00F8E9BE /* P1-WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P1-WeSplit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95102D4D24BAF2FA00F8E9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95102D4F24BAF2FA00F8E9BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95102D5124BAF2FA00F8E9BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95102D5324BAF2FD00F8E9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95102D5624BAF2FD00F8E9BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95102D5924BAF2FD00F8E9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		95102D5B24BAF2FD00F8E9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95102D6124BAF32100F8E9BE /* P1-WeSplit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "P1-WeSplit.entitlements"; sourceTree = "<group>"; };
+		95B99E7728519B9B005C748D /* P1-WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P1-WeSplit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B99E7A28519B9B005C748D /* P1_WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_WeSplitApp.swift; sourceTree = "<group>"; };
+		95B99E7C28519B9B005C748D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95B99E7E28519B9E005C748D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95B99E8128519B9E005C748D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		95102D4724BAF2FA00F8E9BE /* Frameworks */ = {
+		95B99E7428519B9B005C748D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,41 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95102D4124BAF2FA00F8E9BE = {
+		95B99E6E28519B9B005C748D = {
 			isa = PBXGroup;
 			children = (
-				95102D4C24BAF2FA00F8E9BE /* P1-WeSplit */,
-				95102D4B24BAF2FA00F8E9BE /* Products */,
+				95B99E7928519B9B005C748D /* P1-WeSplit */,
+				95B99E7828519B9B005C748D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95102D4B24BAF2FA00F8E9BE /* Products */ = {
+		95B99E7828519B9B005C748D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95102D4A24BAF2FA00F8E9BE /* P1-WeSplit.app */,
+				95B99E7728519B9B005C748D /* P1-WeSplit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95102D4C24BAF2FA00F8E9BE /* P1-WeSplit */ = {
+		95B99E7928519B9B005C748D /* P1-WeSplit */ = {
 			isa = PBXGroup;
 			children = (
-				95102D6124BAF32100F8E9BE /* P1-WeSplit.entitlements */,
-				95102D4D24BAF2FA00F8E9BE /* AppDelegate.swift */,
-				95102D4F24BAF2FA00F8E9BE /* SceneDelegate.swift */,
-				95102D5124BAF2FA00F8E9BE /* ContentView.swift */,
-				95102D5324BAF2FD00F8E9BE /* Assets.xcassets */,
-				95102D5824BAF2FD00F8E9BE /* LaunchScreen.storyboard */,
-				95102D5B24BAF2FD00F8E9BE /* Info.plist */,
-				95102D5524BAF2FD00F8E9BE /* Preview Content */,
+				95B99E7A28519B9B005C748D /* P1_WeSplitApp.swift */,
+				95B99E7C28519B9B005C748D /* ContentView.swift */,
+				95B99E7E28519B9E005C748D /* Assets.xcassets */,
+				95B99E8028519B9E005C748D /* Preview Content */,
 			);
 			path = "P1-WeSplit";
 			sourceTree = "<group>";
 		};
-		95102D5524BAF2FD00F8E9BE /* Preview Content */ = {
+		95B99E8028519B9E005C748D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				95102D5624BAF2FD00F8E9BE /* Preview Assets.xcassets */,
+				95B99E8128519B9E005C748D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -80,102 +70,88 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95102D4924BAF2FA00F8E9BE /* P1-WeSplit */ = {
+		95B99E7628519B9B005C748D /* P1-WeSplit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95102D5E24BAF2FD00F8E9BE /* Build configuration list for PBXNativeTarget "P1-WeSplit" */;
+			buildConfigurationList = 95B99E8528519B9E005C748D /* Build configuration list for PBXNativeTarget "P1-WeSplit" */;
 			buildPhases = (
-				95102D4624BAF2FA00F8E9BE /* Sources */,
-				95102D4724BAF2FA00F8E9BE /* Frameworks */,
-				95102D4824BAF2FA00F8E9BE /* Resources */,
+				95B99E7328519B9B005C748D /* Sources */,
+				95B99E7428519B9B005C748D /* Frameworks */,
+				95B99E7528519B9B005C748D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "P1-WeSplit";
-			productName = WeSplit;
-			productReference = 95102D4A24BAF2FA00F8E9BE /* P1-WeSplit.app */;
+			productName = "P1-WeSplit";
+			productReference = 95B99E7728519B9B005C748D /* P1-WeSplit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95102D4224BAF2FA00F8E9BE /* Project object */ = {
+		95B99E6F28519B9B005C748D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1230;
-				ORGANIZATIONNAME = "Michael Lam";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					95102D4924BAF2FA00F8E9BE = {
-						CreatedOnToolsVersion = 11.5;
+					95B99E7628519B9B005C748D = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 95102D4524BAF2FA00F8E9BE /* Build configuration list for PBXProject "P1-WeSplit" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 95B99E7228519B9B005C748D /* Build configuration list for PBXProject "P1-WeSplit" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 95102D4124BAF2FA00F8E9BE;
-			productRefGroup = 95102D4B24BAF2FA00F8E9BE /* Products */;
+			mainGroup = 95B99E6E28519B9B005C748D;
+			productRefGroup = 95B99E7828519B9B005C748D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95102D4924BAF2FA00F8E9BE /* P1-WeSplit */,
+				95B99E7628519B9B005C748D /* P1-WeSplit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95102D4824BAF2FA00F8E9BE /* Resources */ = {
+		95B99E7528519B9B005C748D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95102D5A24BAF2FD00F8E9BE /* LaunchScreen.storyboard in Resources */,
-				95102D5724BAF2FD00F8E9BE /* Preview Assets.xcassets in Resources */,
-				95102D5424BAF2FD00F8E9BE /* Assets.xcassets in Resources */,
+				95B99E8228519B9E005C748D /* Preview Assets.xcassets in Resources */,
+				95B99E7F28519B9E005C748D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95102D4624BAF2FA00F8E9BE /* Sources */ = {
+		95B99E7328519B9B005C748D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95102D4E24BAF2FA00F8E9BE /* AppDelegate.swift in Sources */,
-				95102D5024BAF2FA00F8E9BE /* SceneDelegate.swift in Sources */,
-				95102D5224BAF2FA00F8E9BE /* ContentView.swift in Sources */,
+				95B99E7D28519B9B005C748D /* ContentView.swift in Sources */,
+				95B99E7B28519B9B005C748D /* P1_WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		95102D5824BAF2FD00F8E9BE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95102D5924BAF2FD00F8E9BE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		95102D5C24BAF2FD00F8E9BE /* Debug */ = {
+		95B99E8328519B9E005C748D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -219,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -229,14 +205,13 @@
 			};
 			name = Debug;
 		};
-		95102D5D24BAF2FD00F8E9BE /* Release */ = {
+		95B99E8428519B9E005C748D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -274,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,45 +259,57 @@
 			};
 			name = Release;
 		};
-		95102D5F24BAF2FD00F8E9BE /* Debug */ = {
+		95B99E8628519B9E005C748D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "P1-WeSplit/P1-WeSplit.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"P1-WeSplit/Preview Content\"";
-				DEVELOPMENT_TEAM = PN9QBRJ673;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "P1-WeSplit/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeljylam.P1-WeSplit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		95102D6024BAF2FD00F8E9BE /* Release */ = {
+		95B99E8728519B9E005C748D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "P1-WeSplit/P1-WeSplit.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"P1-WeSplit/Preview Content\"";
-				DEVELOPMENT_TEAM = PN9QBRJ673;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "P1-WeSplit/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeljylam.P1-WeSplit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95102D4524BAF2FA00F8E9BE /* Build configuration list for PBXProject "P1-WeSplit" */ = {
+		95B99E7228519B9B005C748D /* Build configuration list for PBXProject "P1-WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95102D5C24BAF2FD00F8E9BE /* Debug */,
-				95102D5D24BAF2FD00F8E9BE /* Release */,
+				95B99E8328519B9E005C748D /* Debug */,
+				95B99E8428519B9E005C748D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95102D5E24BAF2FD00F8E9BE /* Build configuration list for PBXNativeTarget "P1-WeSplit" */ = {
+		95B99E8528519B9E005C748D /* Build configuration list for PBXNativeTarget "P1-WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95102D5F24BAF2FD00F8E9BE /* Debug */,
-				95102D6024BAF2FD00F8E9BE /* Release */,
+				95B99E8628519B9E005C748D /* Debug */,
+				95B99E8728519B9E005C748D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 95102D4224BAF2FA00F8E9BE /* Project object */;
+	rootObject = 95B99E6F28519B9B005C748D /* Project object */;
 }

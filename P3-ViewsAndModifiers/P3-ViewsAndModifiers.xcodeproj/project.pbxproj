@@ -3,31 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		958AFA7124D0E32200E49588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AFA7024D0E32200E49588 /* AppDelegate.swift */; };
-		958AFA7324D0E32200E49588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AFA7224D0E32200E49588 /* SceneDelegate.swift */; };
-		958AFA7524D0E32200E49588 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AFA7424D0E32200E49588 /* ContentView.swift */; };
-		958AFA7724D0E32600E49588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958AFA7624D0E32600E49588 /* Assets.xcassets */; };
-		958AFA7A24D0E32600E49588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958AFA7924D0E32600E49588 /* Preview Assets.xcassets */; };
-		958AFA7D24D0E32600E49588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958AFA7B24D0E32600E49588 /* LaunchScreen.storyboard */; };
+		95227BB52852C52900C22D17 /* P3_ViewsAndModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95227BB42852C52900C22D17 /* P3_ViewsAndModifiersApp.swift */; };
+		95227BB72852C52900C22D17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95227BB62852C52900C22D17 /* ContentView.swift */; };
+		95227BB92852C52C00C22D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95227BB82852C52C00C22D17 /* Assets.xcassets */; };
+		95227BBC2852C52C00C22D17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95227BBB2852C52C00C22D17 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		958AFA6D24D0E32200E49588 /* P3-ViewsAndModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P3-ViewsAndModifiers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		958AFA7024D0E32200E49588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		958AFA7224D0E32200E49588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		958AFA7424D0E32200E49588 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		958AFA7624D0E32600E49588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		958AFA7924D0E32600E49588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		958AFA7C24D0E32600E49588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		958AFA7E24D0E32600E49588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95227BB12852C52800C22D17 /* P3-ViewsAndModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P3-ViewsAndModifiers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95227BB42852C52900C22D17 /* P3_ViewsAndModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3_ViewsAndModifiersApp.swift; sourceTree = "<group>"; };
+		95227BB62852C52900C22D17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95227BB82852C52C00C22D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95227BBB2852C52C00C22D17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		958AFA6A24D0E32200E49588 /* Frameworks */ = {
+		95227BAE2852C52800C22D17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		958AFA6424D0E32200E49588 = {
+		95227BA82852C52800C22D17 = {
 			isa = PBXGroup;
 			children = (
-				958AFA6F24D0E32200E49588 /* P3-ViewsAndModifiers */,
-				958AFA6E24D0E32200E49588 /* Products */,
+				95227BB32852C52800C22D17 /* P3-ViewsAndModifiers */,
+				95227BB22852C52800C22D17 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		958AFA6E24D0E32200E49588 /* Products */ = {
+		95227BB22852C52800C22D17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				958AFA6D24D0E32200E49588 /* P3-ViewsAndModifiers.app */,
+				95227BB12852C52800C22D17 /* P3-ViewsAndModifiers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		958AFA6F24D0E32200E49588 /* P3-ViewsAndModifiers */ = {
+		95227BB32852C52800C22D17 /* P3-ViewsAndModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				958AFA7024D0E32200E49588 /* AppDelegate.swift */,
-				958AFA7224D0E32200E49588 /* SceneDelegate.swift */,
-				958AFA7424D0E32200E49588 /* ContentView.swift */,
-				958AFA7624D0E32600E49588 /* Assets.xcassets */,
-				958AFA7B24D0E32600E49588 /* LaunchScreen.storyboard */,
-				958AFA7E24D0E32600E49588 /* Info.plist */,
-				958AFA7824D0E32600E49588 /* Preview Content */,
+				95227BB42852C52900C22D17 /* P3_ViewsAndModifiersApp.swift */,
+				95227BB62852C52900C22D17 /* ContentView.swift */,
+				95227BB82852C52C00C22D17 /* Assets.xcassets */,
+				95227BBA2852C52C00C22D17 /* Preview Content */,
 			);
 			path = "P3-ViewsAndModifiers";
 			sourceTree = "<group>";
 		};
-		958AFA7824D0E32600E49588 /* Preview Content */ = {
+		95227BBA2852C52C00C22D17 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				958AFA7924D0E32600E49588 /* Preview Assets.xcassets */,
+				95227BBB2852C52C00C22D17 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,102 +70,88 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		958AFA6C24D0E32200E49588 /* P3-ViewsAndModifiers */ = {
+		95227BB02852C52800C22D17 /* P3-ViewsAndModifiers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 958AFA8124D0E32600E49588 /* Build configuration list for PBXNativeTarget "P3-ViewsAndModifiers" */;
+			buildConfigurationList = 95227BBF2852C52C00C22D17 /* Build configuration list for PBXNativeTarget "P3-ViewsAndModifiers" */;
 			buildPhases = (
-				958AFA6924D0E32200E49588 /* Sources */,
-				958AFA6A24D0E32200E49588 /* Frameworks */,
-				958AFA6B24D0E32200E49588 /* Resources */,
+				95227BAD2852C52800C22D17 /* Sources */,
+				95227BAE2852C52800C22D17 /* Frameworks */,
+				95227BAF2852C52800C22D17 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "P3-ViewsAndModifiers";
-			productName = ViewsAndModifiers;
-			productReference = 958AFA6D24D0E32200E49588 /* P3-ViewsAndModifiers.app */;
+			productName = "P3-ViewsAndModifiers";
+			productReference = 95227BB12852C52800C22D17 /* P3-ViewsAndModifiers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		958AFA6524D0E32200E49588 /* Project object */ = {
+		95227BA92852C52800C22D17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
-				ORGANIZATIONNAME = "Michael Lam";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					958AFA6C24D0E32200E49588 = {
-						CreatedOnToolsVersion = 11.6;
+					95227BB02852C52800C22D17 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 958AFA6824D0E32200E49588 /* Build configuration list for PBXProject "P3-ViewsAndModifiers" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 95227BAC2852C52800C22D17 /* Build configuration list for PBXProject "P3-ViewsAndModifiers" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 958AFA6424D0E32200E49588;
-			productRefGroup = 958AFA6E24D0E32200E49588 /* Products */;
+			mainGroup = 95227BA82852C52800C22D17;
+			productRefGroup = 95227BB22852C52800C22D17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				958AFA6C24D0E32200E49588 /* P3-ViewsAndModifiers */,
+				95227BB02852C52800C22D17 /* P3-ViewsAndModifiers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		958AFA6B24D0E32200E49588 /* Resources */ = {
+		95227BAF2852C52800C22D17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958AFA7D24D0E32600E49588 /* LaunchScreen.storyboard in Resources */,
-				958AFA7A24D0E32600E49588 /* Preview Assets.xcassets in Resources */,
-				958AFA7724D0E32600E49588 /* Assets.xcassets in Resources */,
+				95227BBC2852C52C00C22D17 /* Preview Assets.xcassets in Resources */,
+				95227BB92852C52C00C22D17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		958AFA6924D0E32200E49588 /* Sources */ = {
+		95227BAD2852C52800C22D17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958AFA7124D0E32200E49588 /* AppDelegate.swift in Sources */,
-				958AFA7324D0E32200E49588 /* SceneDelegate.swift in Sources */,
-				958AFA7524D0E32200E49588 /* ContentView.swift in Sources */,
+				95227BB72852C52900C22D17 /* ContentView.swift in Sources */,
+				95227BB52852C52900C22D17 /* P3_ViewsAndModifiersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		958AFA7B24D0E32600E49588 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				958AFA7C24D0E32600E49588 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		958AFA7F24D0E32600E49588 /* Debug */ = {
+		95227BBD2852C52C00C22D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -192,6 +170,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -216,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,14 +205,13 @@
 			};
 			name = Debug;
 		};
-		958AFA8024D0E32600E49588 /* Release */ = {
+		95227BBE2852C52C00C22D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -252,6 +230,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,39 +259,57 @@
 			};
 			name = Release;
 		};
-		958AFA8224D0E32600E49588 /* Debug */ = {
+		95227BC02852C52C00C22D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"P3-ViewsAndModifiers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "P3-ViewsAndModifiers/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeljylam.P3-ViewsAndModifiers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		958AFA8324D0E32600E49588 /* Release */ = {
+		95227BC12852C52C00C22D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"P3-ViewsAndModifiers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "P3-ViewsAndModifiers/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeljylam.P3-ViewsAndModifiers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		958AFA6824D0E32200E49588 /* Build configuration list for PBXProject "P3-ViewsAndModifiers" */ = {
+		95227BAC2852C52800C22D17 /* Build configuration list for PBXProject "P3-ViewsAndModifiers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				958AFA7F24D0E32600E49588 /* Debug */,
-				958AFA8024D0E32600E49588 /* Release */,
+				95227BBD2852C52C00C22D17 /* Debug */,
+				95227BBE2852C52C00C22D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		958AFA8124D0E32600E49588 /* Build configuration list for PBXNativeTarget "P3-ViewsAndModifiers" */ = {
+		95227BBF2852C52C00C22D17 /* Build configuration list for PBXNativeTarget "P3-ViewsAndModifiers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				958AFA8224D0E32600E49588 /* Debug */,
-				958AFA8324D0E32600E49588 /* Release */,
+				95227BC02852C52C00C22D17 /* Debug */,
+				95227BC12852C52C00C22D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 958AFA6524D0E32200E49588 /* Project object */;
+	rootObject = 95227BA92852C52800C22D17 /* Project object */;
 }

@@ -1,113 +1,131 @@
 //
 //  ContentView.swift
-//  Milestone 1: RockPaperScissors
+//  M1-RockPaperScissors
 //
-//  Created by Michael Lam on 2021-01-09.
+//  Created by Michael Lam on 2022-07-28.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    let moves = ["Rock", "Paper", "Scissors"]
-    let moveIcons = ["✊", "✋", "✌️"]
-    @State private var cpuMove = Int.random(in: 0...2)
+    let choices = ["Rock", "Paper", "Scissors"]
+    let choicesIcons = ["✊", "✋", "✌️"]
+    @State private var cpuChoice = Int.random(in: 0...2)
     @State private var playerShouldWin = Bool.random()
-    @State private var playerScore = 0
+    @State private var correctMoves = 0
     @State private var round = 1
+    
     @State private var showResults = false
-    @State private var resultsTitle = ""
-    @State private var resultsDescription = ""
+    @State private var results = "Correct!"
     
     var body: some View {
-        VStack {
-            Text("Rock Paper Scissors Trainer")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-                
-            Spacer()
-            Text("CPU chose \(moveIcons[cpuMove]) \(moves[cpuMove]).")
+        ZStack {
             if playerShouldWin {
-                Text("Defeat the CPU!")
+                Color(red: 175/255, green: 255/255, blue: 160/255)
+                    .ignoresSafeArea()
             } else {
-                Text("Lose against the CPU!")
-            }
-            HStack(spacing: 10) {
-                ForEach(0 ..< 3) { i in
-                    Button(action: {
-                        self.moveChosen(i)
-                    }) {
-                        Text(moveIcons[i] + " " + moves[i])
-                            .bold()
-                            .padding(8)
-                            .foregroundColor(.primary)
-                    }
-                    .background(Capsule().stroke(lineWidth: 2))
-                }
+                Color(red: 255/255, green: 115/255, blue: 140/255)
+                    .ignoresSafeArea()
             }
             
-            Spacer()
-            Text("Round \(round)")
-                .bold()
-            Text("Score: \(playerScore)")
-                .bold()
-                .padding(.bottom)
+            VStack {
+                Spacer()
+                Text("Rock Paper Scissors Challenge")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                
+                if playerShouldWin {
+                    Text("Defeat")
+                        .fontWeight(.bold)
+                } else {
+                    Text("Lose against")
+                        .fontWeight(.bold)
+                }
+                
+                HStack(spacing: 0) {
+                    Text(choicesIcons[cpuChoice])
+                        .font(.system(size: 50))
+                    Text(choices[cpuChoice])
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
+                }
+                
+                HStack {
+                    ForEach(0 ..< 3) { i in
+                        Button(action: {
+                            calculateResults(with: i)
+                        }) {
+                            Text("\(choicesIcons[i]) \(choices[i])")
+                                .foregroundColor(.primary)
+                                .fontWeight(.bold)
+                                .padding(8)
+                        }
+                        .background(.regularMaterial, in: Capsule())
+                        .disabled(showResults)
+                    }
+                }
+                
+                Spacer()
+                Text("\(correctMoves) out of \(round) correct moves")
+                    .fontWeight(.bold)
+                Text(results)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .opacity(showResults ? 1 : 0)
+                Spacer()
+            }
         }
-        .alert(isPresented: $showResults, content: {
-            Alert(title: Text(resultsTitle), message: Text(resultsDescription), dismissButton: .default(Text("Continue")) {
-                self.resetGame()
-            })
-        })
     }
     
-    func moveChosen(_ playerMove: Int) {
+    func calculateResults(with playerChoice: Int) {
         if playerShouldWin {
-            if (cpuMove == 0 && playerMove == 1) || (cpuMove == 1 && playerMove == 2) || (cpuMove == 2 && playerMove == 0) {
-                resultsTitle = "Correct"
-                playerScore += 1
-                resultsDescription = "Your current score is \(playerScore)."
+            if (cpuChoice == 0 && playerChoice == 1) || (cpuChoice == 1 && playerChoice == 2) || (cpuChoice == 2 && playerChoice == 0) {
+                results = "Correct!"
+                correctMoves += 1
             } else {
-                resultsTitle = "Incorrect"
-                if playerScore != 0 {
-                    playerScore -= 1
-                }
-                
-                if cpuMove == 0 {
-                    resultsDescription = "The correct move was Paper."
-                } else if cpuMove == 1 {
-                    resultsDescription = "The correct move was Scissors."
+                if cpuChoice == 0 {
+                    results = "The correct move was ✋ Paper"
+                } else if cpuChoice == 1 {
+                    results = "The correct move was ✌️ Scissors"
                 } else {
-                    resultsDescription = "The correct move was Rock."
+                    results = "The correct move was ✊ Rock"
                 }
-                resultsDescription += "\nYour current score is \(playerScore)."
             }
         } else {
-            if (cpuMove == 0 && playerMove == 2) || (cpuMove == 1 && playerMove == 0) || (cpuMove == 2 && playerMove == 1) {
-                resultsTitle = "Correct"
-                playerScore += 1
-                resultsDescription = "Your current score is \(playerScore)."
+            if (cpuChoice == 0 && playerChoice == 2) || (cpuChoice == 1 && playerChoice == 0) || (cpuChoice == 2 && playerChoice == 1) {
+                results = "Correct!"
+                correctMoves += 1
             } else {
-                resultsTitle = "Incorrect"
-                if playerScore != 0 {
-                    playerScore -= 1
-                }
-                
-                if cpuMove == 0 {
-                    resultsDescription = "The correct move was Scissors."
-                } else if cpuMove == 1 {
-                    resultsDescription = "The correct move was Rock."
+                if cpuChoice == 0 {
+                    results = "The correct move was ✌️ Scissors"
+                } else if cpuChoice == 1 {
+                    results = "The correct move was ✊ Rock"
                 } else {
-                    resultsDescription = "The correct move was Paper."
+                    results = "The correct move was ✋ Paper"
                 }
-                resultsDescription += "\nYour current score is \(playerScore)."
             }
         }
         round += 1
-        showResults = true
+        
+        withAnimation {
+            showResults = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: {
+            withAnimation {
+                showResults = false
+            }
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.75, execute: {
+            resetGame()
+        })
     }
     
     func resetGame() {
-        cpuMove = Int.random(in: 0...2)
+        cpuChoice = Int.random(in: 0...2)
         playerShouldWin = Bool.random()
     }
 }

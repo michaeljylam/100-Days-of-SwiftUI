@@ -1,8 +1,8 @@
 //
 //  M1_RockPaperScissorsApp.swift
-//  Milestone 1: RockPaperScissors
+//  M1-RockPaperScissors
 //
-//  Created by Michael Lam on 2021-01-09.
+//  Created by Michael Lam on 2022-07-28.
 //
 
 import SwiftUI

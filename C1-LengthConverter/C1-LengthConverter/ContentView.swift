@@ -1,84 +1,88 @@
 //
 //  ContentView.swift
-//  Challenge 1: LengthConverter
+//  C1-LengthConverter
 //
-//  Created by Michael Lam on 2020-07-13.
-//  Copyright © 2020 Michael Lam. All rights reserved.
+//  Created by Michael Lam on 2022-06-12.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var userInput = ""
-    @State private var selectedInputUnit = 0
-    @State private var selectedOutputUnit = 1
+    private let units = [("metres", UnitLength.meters), ("kilometres", UnitLength.kilometers), ("feet", UnitLength.feet), ("yards", UnitLength.yards), ("miles", UnitLength.miles)]
+    private var formatter = MeasurementFormatter()
+
+    @State private var inputValue: Double = 1
+    @State private var inputUnitIndex = 1
+    @State private var outputUnitIndex = 0
     
-    var units = ["metres (m)", "kilometres (km)", "feet (ft)", "yards (yd)", "miles (mi)"]
+    var originalLength: String {
+        formatter.string(from: Measurement(value: inputValue, unit: units[inputUnitIndex].1))
+    }
     
-    var calculatedResult: String {
-        let input = Double(userInput) ?? 0
-        var originalMeasurement, convertedMeasurement: Measurement<UnitLength>
-        var result: String
-        
-        if selectedInputUnit == 0 {
-            originalMeasurement = Measurement(value: input, unit: UnitLength.meters)
-        } else if selectedInputUnit == 1 {
-            originalMeasurement = Measurement(value: input, unit: UnitLength.kilometers)
-        } else if selectedInputUnit == 2 {
-            originalMeasurement = Measurement(value: input, unit: UnitLength.feet)
-        } else if selectedInputUnit == 3 {
-            originalMeasurement = Measurement(value: input, unit: UnitLength.yards)
-        } else {
-            originalMeasurement = Measurement(value: input, unit: UnitLength.miles)
-        }
-        
-        if selectedOutputUnit == 0 {
-            convertedMeasurement = originalMeasurement.converted(to: UnitLength.meters)
-        } else if selectedOutputUnit == 1 {
-            convertedMeasurement = originalMeasurement.converted(to: UnitLength.kilometers)
-        } else if selectedOutputUnit == 2 {
-           convertedMeasurement = originalMeasurement.converted(to: UnitLength.feet)
-        } else if selectedOutputUnit == 3 {
-            convertedMeasurement = originalMeasurement.converted(to: UnitLength.yards)
-        } else {
-            convertedMeasurement = originalMeasurement.converted(to: UnitLength.miles)
-        }
-        
-        let formatter = MeasurementFormatter()
-        formatter.unitOptions = [.providedUnit]
-        formatter.unitStyle = .long
-        result = formatter.string(from: convertedMeasurement)
-        
-        return result
+    var convertedLength: String {
+        formatter.string(from: Measurement(value: inputValue, unit: units[inputUnitIndex].1)
+            .converted(to: units[outputUnitIndex].1))
     }
     
     init() {
-        UITableView.appearance().contentInset.top = -35
+        let navigationTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont(
+                descriptor:
+                    navigationTitleFont.fontDescriptor
+                    .withDesign(.rounded)?
+                    .withSymbolicTraits(.traitBold)
+                ??
+                navigationTitleFont.fontDescriptor,
+                size: navigationTitleFont.pointSize
+            )
+        ]
+        
+        formatter.unitOptions = [.providedUnit]
+        formatter.unitStyle = .long
     }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Convert length...", text: $userInput)
-                    .keyboardType(.decimalPad)
-                    Picker(selection: $selectedInputUnit, label: Text("Convert from...")) {
-                        ForEach(0 ..< units.count) {
-                            Text(self.units[$0])
+                    TextField("Enter a length to convert", value: $inputValue, format: .number)
+                        .keyboardType(.decimalPad)
+                    
+                    Picker("Convert from...", selection: $inputUnitIndex) {
+                        ForEach(0 ..< units.count, id: \.self) {
+                            Text(units[$0].0)
                         }
                     }
-                    Picker(selection: $selectedOutputUnit, label: Text("Convert to...")) {
-                        ForEach(0 ..< units.count) {
-                            Text(self.units[$0])
+                    
+                    Picker("Convert to...", selection: $outputUnitIndex) {
+                        ForEach(0 ..< units.count, id: \.self) {
+                            Text(units[$0].0)
                         }
                     }
                 }
                 
-                Section(header: Text("Conversion Result")) {
-                    Text("\(calculatedResult)")
+                Section {
+                    VStack(alignment: .center) {
+                        Image(systemName: "ruler.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 40)
+                            .padding(.trailing, 10)
+                        Text("\(originalLength) is equal to")
+                            .font(.headline)
+                        Text(convertedLength)
+                            .font(.system(.largeTitle, design: .rounded))
+                            .bold()
+                    }
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.5)
+                    .frame(maxWidth: .infinity)
                 }
+                .listRowBackground(Color(UIColor.systemGroupedBackground))
+                .listRowSeparator(.hidden)
             }
-            .navigationBarTitle("Length Converter")
+            .navigationTitle("Length Converter")
         }
     }
 }

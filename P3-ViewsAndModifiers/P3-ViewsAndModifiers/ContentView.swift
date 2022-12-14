@@ -1,31 +1,29 @@
 //
 //  ContentView.swift
-//  Project 3: ViewsAndModifiers
+//  P3-ViewsAndModifiers
 //
-//  Created by Michael Lam on 2020-07-28.
-//  Copyright © 2020 Michael Lam. All rights reserved.
+//  Created by Michael Lam on 2022-06-09.
 //
 
 import SwiftUI
 
-struct BlueTitle: ViewModifier {
+struct ProminentText: ViewModifier {
     func body(content: Content) -> some View {
-        content
-            .font(.largeTitle)
-            .foregroundColor(Color.blue)
+        content.font(.largeTitle)
+            .foregroundColor(.blue)
     }
 }
 
 extension View {
-    func blueTitleStyle() -> some View {
-        self.modifier(BlueTitle())
+    func prominentStyle() -> some View {
+        modifier(ProminentText())
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .blueTitleStyle()
+        Text("Hello, world!")
+            .prominentStyle()
     }
 }
 

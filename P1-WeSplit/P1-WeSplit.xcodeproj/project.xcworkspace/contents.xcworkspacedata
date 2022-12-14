@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/michaellam/Development/100-Days-of-SwiftUI/WeSplit/P1-WeSplit.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

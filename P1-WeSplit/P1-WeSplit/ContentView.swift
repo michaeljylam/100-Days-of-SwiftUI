@@ -1,76 +1,74 @@
 //
 //  ContentView.swift
-//  Project 1: WeSplit
+//  P1-WeSplit
 //
-//  Created by Michael Lam on 2020-07-12.
-//  Copyright © 2020 Michael Lam. All rights reserved.
+//  Created by Michael Lam on 2022-06-08.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var chequeAmount = ""
-    @State private var numberOfPeople = ""
-    @State private var tipPercentage = 2
-    
-    let tipPercentages = [0, 10, 15, 20, 25]
-    
-    var billTotal: Double {
-        let orderAmount = Double(chequeAmount) ?? 0
-        let tipSelection = Double(tipPercentages[tipPercentage])
+    @State private var chequeAmount = 0.0
+    @State private var numberOfPeople = 2
+    @State private var tipPercentage = 20
+    @FocusState private var amountIsFocused: Bool
         
-        let tipValue = orderAmount * tipSelection / 100
-        let totalCost = orderAmount + tipValue
-        
-        return totalCost
+    var totalAmount: Double {
+        let tipValue = chequeAmount / 100 * Double(tipPercentage)
+        return chequeAmount + tipValue
     }
     
     var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople) ?? 1
-        
-        if (peopleCount != 0) {
-            let amountPerPerson = billTotal / peopleCount
-            return amountPerPerson
-        } else {
-            return billTotal
-        }
+        totalAmount / Double(numberOfPeople + 2)
     }
     
-    init() {
-        UITableView.appearance().contentInset.top = -35
+    var currency: FloatingPointFormatStyle<Double>.Currency {
+        .currency(code: Locale.current.currencyCode ?? "CAD")
     }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Cost of Bill", text: $chequeAmount)
+                    TextField("Amount", value: $chequeAmount, format: currency)
                         .keyboardType(.decimalPad)
+                        .focused($amountIsFocused)
                     
-                    TextField("Number of People", text: $numberOfPeople)
-                        .keyboardType(.numberPad)
-                }
-                
-                Section(header: Text("How much tip do you want to leave?")) {
-                    Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(0 ..< tipPercentages.count) {
-                            Text("\(self.tipPercentages[$0])%")
+                    Picker("Number of people", selection: $numberOfPeople) {
+                        ForEach(2..<100) {
+                            Text("\($0) people")
                         }
                     }
-                    .pickerStyle(SegmentedPickerStyle())
+                    
+                    Picker("Tip percentage", selection: $tipPercentage) {
+                        ForEach(0..<101) {
+                            Text("\($0)%")
+                        }
+                    }
                 }
                 
-                Section(header: Text("Total amount of cheque")) {
-                    Text("$\(billTotal, specifier: "%.2f")")
-                        .foregroundColor(tipPercentage == 0 ? Color.red : Color.black)
+                Section {
+                    Text(totalAmount, format: currency)
+                        .foregroundColor(tipPercentage == 0 ? Color.red : Color.primary)
+                } header: {
+                    Text("Total amount")
                 }
                 
-                Section(header: Text("Amount per person")) {
-                    Text("$\(totalPerPerson, specifier: "%.2f")")
-                        .foregroundColor(tipPercentage == 0 ? Color.red : Color.black)
+                Section {
+                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "CAD"))
+                } header: {
+                    Text("Amount per person")
                 }
             }
-            .navigationBarTitle("WeSplit")
+            .navigationTitle("WeSplit")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
